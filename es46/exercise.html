@@ -20,5 +20,10 @@
 </html>
 
 <script>
-  // code here
+  const select = document.getElementsByClassName("form-input");
+  const value = [];
+  for (let i = 0; i < select.length; i++) {
+    value.push(select[i].value);
+  }
+  console.log(value);
 </script>
