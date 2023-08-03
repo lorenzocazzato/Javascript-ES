@@ -20,10 +20,12 @@
 </html>
 
 <script>
-  const select = document.getElementsByClassName("form-input");
-  const value = [];
-  for (let i = 0; i < select.length; i++) {
-    value.push(select[i].value);
+  const formInputs = document.getElementsByClassName("form-input");
+
+  for (const input of formInputs) {
+    if (input.type === "text") {
+      const inputValue = input.value;
+      console.log(`Input Value: ${inputValue}`);
+    }
   }
-  console.log(value);
 </script>
